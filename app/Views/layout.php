@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard 2</title>
+  <title><?=$title;?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -185,8 +185,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item ">
+            <a href="/" class="nav-link active <?=($page=='dasboard')? 'active':'';?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -194,8 +194,8 @@
             </a>
            
           </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+          <li class="nav-item menu-open">
+            <a href="/employee_data" class="nav-link <?=($page=='employee_data')? 'menu-open':'';?>">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Employees
@@ -204,7 +204,7 @@
             </a>
               <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="/employee_data" class="nav-link <?=($page=='employee_data')? 'active':'';?>">
                   <i class="far fas fa-user"></i>
                   <p>Employee Data</p>
                 </a>
@@ -269,6 +269,7 @@
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-building"></i>
